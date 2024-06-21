@@ -21,7 +21,7 @@ let litrosConsumidos = distanciaKM / kmPerLitro;
 
 let valorGasto;
 
-if (tipoCombustivel == 'gasolina') {
+if (tipoCombustivel === 'gasolina') {
     valorGasto = litrosConsumidos * gasolina;
 } else if (tipoCombustivel == 'etanol') {
     valorGasto = litrosConsumidos * etanol;
