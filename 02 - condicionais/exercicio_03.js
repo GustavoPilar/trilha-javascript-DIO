@@ -10,23 +10,31 @@
 */
 
 const valor_Produto = 100.00;
-const forma_De_Pagamento = '3x';
+
+const forma_De_Pagamento = 1;
+/* 
+    [1] Dinheiro ou PIX;
+    [2] Débito;
+    [3] 2x no Crédito;
+    [4] 3x ou mais no Crédito
+*/
+
 let desconto, juros, valor_Final;
 
 switch (forma_De_Pagamento) {
-    case 'dinheiro':
+    case 1:
         desconto = (valor_Produto / 10) * (1.5);
         valor_Final = valor_Produto - desconto;
         break;
-    case 'débito':
+    case 2:
         desconto = (valor_Produto / 10) * (1.0);
         valor_Final = valor_Produto - desconto;
         break;
-    case '2x':
+    case 3:
         desconto = 0;
         valor_Final = valor_Produto - desconto;
         break;
-    default:
+    case 4:
         juros = (valor_Produto / 10) * (1.0);
         valor_Final = valor_Produto + juros;
         break;
